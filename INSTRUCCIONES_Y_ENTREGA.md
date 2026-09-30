@@ -4,6 +4,18 @@ Esta guía detalla cómo utilizar todas las funciones de la aplicación interact
 
 ---
 
+## 📁 Documentación de Evidencia Final
+
+Toda la documentación requerida para la **Evidencia Final (Puntos 1 al 6)** ha sido compilada exhaustivamente en el archivo **`README.md`**:
+1. **Programa funcional:** Arquitectura y enlace en la nube listo para evaluar.
+2. **Diagrama del árbol:** Diagrama ASCII y SVG generado con oración de prueba (`"gato perro casa árbol zorro abeja"`).
+3. **Registro de interacciones relevantes:** Análisis de las 4 consultas clave a la IA.
+4. **Tabla de verificación:** Tabla formal de la Etapa 5 con justificaciones y modificaciones.
+5. **Casos de prueba y resultados:** Matriz de los 8 casos de la rúbrica + los 5 casos límite de la IA.
+6. **Reflexión individual:** Las 3 preguntas respondidas a detalle por el alumno Diego Olea.
+
+---
+
 ## 🔗 1. Enlace para Compartir con el Profesor
 
 Para que el profesor pueda acceder directamente a la aplicación interactiva en cualquier momento y dispositivo (sin necesidad de instalar nada en su computadora), compártele el siguiente enlace:
