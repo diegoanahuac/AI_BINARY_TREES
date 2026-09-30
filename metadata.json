@@ -1,0 +1,6 @@
+{
+  "name": "Árbol Binario de Búsqueda - Análisis y Reporte de Interacción IA",
+  "description": "Herramienta interactiva para Árboles Binarios de Búsqueda (ABB) con procesamiento de texto, visualizador de árbol dinámico, pruebas de casos límite y registro de interacción con IA (Etapas 1 a 5).",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
