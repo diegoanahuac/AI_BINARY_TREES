@@ -8,114 +8,112 @@
 
 ## ✅ Lista de Comprobación de Evidencia Final
 
-| Estado | Requerimiento Solicitado | Sección en el Documento |
+| Estado | Requerimiento Solicitado | Sección y Recursos Gráficos |
 |:---:|---|---|
-| ☑ | **1. Programa funcional (app desplegada ✅)** | [Ver Sección 1](#1-programa-funcional-app-desplegada-) |
-| ☑ | **2. Diagrama o representación del árbol con una oración de prueba** | [Ver Sección 2](#2-diagrama-o-representación-del-árbol-generado) |
-| ☑ | **3. Capturas o registro de las interacciones relevantes con la IA** | [Ver Sección 3](#3-capturas-y-registro-de-interacciones-relevantes-con-la-ia) |
-| ☑ | **4. Tabla de verificación de las respuestas obtenidas** | [Ver Sección 4](#4-tabla-de-verificación-de-las-respuestas-obtenidas) |
-| ☑ | **5. Casos de prueba y resultados** | [Ver Sección 5](#5-casos-de-prueba-y-resultados) |
-| ☑ | **6. Reflexión individual del integrante** | [Ver Sección 6](#6-reflexión-individual-del-integrante) |
+| ☑ | **1. Programa funcional (app desplegada ✅)** | [Sección 1: Dashboard y arquitectura](#1-programa-funcional-app-desplegada-) |
+| ☑ | **2. Diagrama o representación del árbol con una oración de prueba** | [Sección 2: Diagramas vectoriales de 4 casos](#2-diagrama-o-representación-del-árbol-con-oración-de-prueba) |
+| ☑ | **3. Capturas o registro de las interacciones relevantes con la IA** | [Sección 3: Terminal de prompts y auditoría](#3-registro-de-interacciones-relevantes-con-la-ia) |
+| ☑ | **4. Tabla de verificación de las respuestas obtenidas** | [Sección 4: Tabla de evidencia gráfica Etapa 5](#4-tabla-de-verificación-de-las-respuestas-obtenidas) |
+| ☑ | **5. Casos de prueba y resultados** | [Sección 5: Panel de pruebas y 13 casos aprobados](#5-casos-de-prueba-y-resultados) |
+| ☑ | **6. Reflexión individual del integrante** | [Sección 6: Reflexión completa de Diego Olea](#6-reflexión-individual-del-integrante) |
 
 ---
 
 ## 1. Programa Funcional (App Desplegada ✅)
 
-El sistema se encuentra completamente implementado en **TypeScript** y **React**, desplegado y disponible en la nube. Incluye un motor de Árbol Binario de Búsqueda (ABB), procesamiento de texto en español (tildes, diéresis, letra «ñ»), sanitización ortográfica, renderizado vectorial SVG interactivo y módulo de recorridos.
+El sistema se encuentra 100% programado en **TypeScript** y **React**, desplegado y disponible en la nube:
 
-* **Enlace Público para el Profesor:**  
+* **Enlace Público para el Profesor (Producción):**  
   👉 **`https://ais-pre-patzul5jrew5jg5a2pivai-181795296148.us-west2.run.app`**
 * **Enlace de Desarrollo en Vivo:**  
   👉 `https://ais-dev-patzul5jrew5jg5a2pivai-181795296148.us-west2.run.app`
 
-### 📸 Evidencia de la App Desplegada y Funcional:
+### 🖼️ Panel General de la Aplicación en Vivo:
+![Dashboard de la Aplicación ABB](assets/01_app_dashboard.svg)
 
-#### Vista General: Entrada de texto, tokens extraídos y métricas en tiempo real
-![Simulador y Visualizador del ABB](Screenshot 2026-09-30 at 12.38.29 p.m..png)
-
-#### Entorno Integral: Barra de navegación, topología y recorridos
-![Entorno de la Aplicación en Vivo](Screenshot 2026-09-30 at 12.38.35 p.m..png)
+### 💻 Módulos del Código Fuente:
+* `src/utils/bstEngine.ts`: Inserción recursiva, recorridos Inorden/Preorden/Postorden/BFS, cálculo de métricas en $O(n)$, normalización en español (`localeCompare('es')`) y cálculo de coordenadas SVG.
+* `src/types/bst.ts`: Tipado estricto (`BSTNode`, `TreeMetrics`, `TestCase`, `InteractionRecord`).
+* `src/components/TreeVisualizer.tsx`: Visualizador vectorial interactivo con zoom, desplazamiento y búsqueda de rutas.
+* `src/components/InteractivePlayground.tsx`: Simulador en vivo con toggles de normalización y métricas instantáneas.
 
 ---
 
-## 2. Diagrama o Representación del Árbol Generado
+## 2. Diagrama o Representación del Árbol con Oración de Prueba
 
-Se validó la topología dinámica del árbol bajo múltiples oraciones y frases de prueba. A continuación se presentan las representaciones obtenidas directamente en el visualizador gráfico SVG:
+A continuación se presentan las representaciones gráficas del árbol para diferentes oraciones de prueba:
 
 ### 🟢 Oración de Prueba 1 (Básica): `"gato perro casa"`
-* **Raíz:** `gato`
-* **Subárbol Izquierdo (menor alfabéticamente):** `casa` (Hoja)
-* **Subárbol Derecho (mayor alfabéticamente):** `perro` (Hoja)
-* **Nivel 0:** `gato` (Raíz) | **Nivel 1:** `casa`, `perro`
+* **Raíz:** `gato` (Azul)
+* **Hojas:** `casa` (Izquierda / Menor), `perro` (Derecha / Mayor)
 * **Inorden:** `casa` $\rightarrow$ `gato` $\rightarrow$ `perro`
 
-![Diagrama del Árbol con gato perro casa](Screenshot 2026-09-30 at 12.39.28 p.m..png)
+![Árbol para gato perro casa](assets/02_arbol_gato_perro_casa.svg)
 
 ---
 
 ### 🟢 Oración de Prueba 2 (Orden Alfabético con Tildes): `"zorro árbol abeja"`
-* **Raíz:** `zorro`
-* **Comprobación:** Demuestra el uso correcto de `localeCompare('es')`. Tanto `árbol` como `abeja` descienden a la izquierda de `zorro`.
+* **Comprobación:** Demuestra la corrección con `localeCompare('es')`. Tanto `'árbol'` como `'abeja'` se ordenan a la izquierda de `'zorro'`, evitando el fallo de la tabla ASCII donde `'á'` (225) > `'z'` (122).
 * **Inorden:** `abeja` $\rightarrow$ `árbol` $\rightarrow$ `zorro`
 
-![Diagrama del Árbol con zorro árbol abeja](Screenshot 2026-09-30 at 12.39.35 p.m..png)
+![Árbol para zorro árbol abeja](assets/03_arbol_zorro_arbol_abeja.svg)
 
 ---
 
 ### 🟢 Oración de Prueba 3 (Tratamiento de Duplicados): `"sol luna sol estrella luna sol"`
-* **Comprobación:** Las palabras repetidas no crean nodos redundantes ni deforman el árbol, sino que acumulan su frecuencia con badges visibles:
-  - `sol` (Raíz, Frecuencia: `×3`)
-  - `luna` (Nodo Interno, Frecuencia: `×2`)
-  - `estrella` (Nodo Hoja, Frecuencia: `×1`)
-* **Total de palabras procesadas:** 6 | **Nodos únicos en el árbol:** 3
+* **Comprobación:** Las palabras repetidas acumulan su frecuencia con insignias visibles (`sol ×3`, `luna ×2`, `estrella ×1`) sin crear nodos redundantes en memoria.
+* **Palabras totales ingresadas:** 6 | **Nodos únicos en el árbol:** 3
 
-![Diagrama del Árbol con Frecuencia de Duplicados](Screenshot 2026-09-30 at 12.39.41 p.m..png)
+![Árbol con Tratamiento de Duplicados](assets/04_arbol_duplicados_sol.svg)
 
 ---
 
-### 🟢 Oración de Prueba 4 (Árbol Multinivel - Hojas e Internos):
-> `"madrid barcelona sevilla valencia bilbao zaragoza cadiz"`
+### 🟢 Oración de Prueba 4 (Árbol Multinivel - Nodos Internos y Hojas):
+> Entrada: `"madrid barcelona sevilla valencia bilbao zaragoza cadiz"`
 
-* **Raíz:** `madrid` (Azul)
-* **Nodos Internos:** `barcelona`, `bilbao`, `sevilla`, `valencia` (Violeta)
-* **Nodos Hoja:** `cadiz`, `zaragoza` (Verde)
-* **Altura:** 4 niveles | **Nodos Únicos:** 7
+* **Raíz:** `madrid` (1)
+* **Nodos Internos:** `barcelona`, `bilbao`, `sevilla`, `valencia` (4)
+* **Nodos Hoja:** `cadiz`, `zaragoza` (2)
+* **Altura:** 4 niveles | **Total Nodos Únicos:** 7
 
-![Diagrama Multinivel con Nodos Internos y Hojas](Screenshot 2026-09-30 at 12.39.47 p.m..png)
+![Árbol Multinivel con Internos y Hojas](assets/05_arbol_multinivel_madrid.svg)
 
 ---
 
-## 3. Capturas y Registro de Interacciones Relevantes con la IA
+## 3. Registro de Interacciones Relevantes con la IA
 
-Se formuló una solicitud estructurada con contexto profesional (Etapa 1) y se sometió a auditoría técnica el código generado (Etapa 3).
-
-### 📸 Evidencia de la Etapa 1: Formular una Solicitud con Contexto
+### 📝 Prompt Estructurado de la Etapa 1 (Solicitud con Contexto)
 Se proporcionó al modelo de IA un rol docente y restricciones lingüísticas estrictas para evitar los errores comunes de comparación ASCII:
 
-![Prompt Estructurado de Contexto a la IA](Screenshot 2026-09-30 at 12.40.16 p.m..png)
+![Terminal del Prompt de la Etapa 1](assets/06_prompt_etapa1.svg)
 
-### 📸 Evidencia de la Etapa 3: Verificación y Auditoría Crítica
-Se analizaron las 7 preguntas obligatorias de la rúbrica para identificar bugs ocultos en el código inicial generado por la IA:
+---
 
-![Verificación y Auditoría de las 7 Preguntas](Screenshot 2026-09-30 at 12.40.41 p.m..png)
+### 🔍 Auditoría Crítica de la Etapa 3 (Las 7 Preguntas de Verificación)
+
+1. **¿Qué problema resuelve este código?**  
+   Indexación lexicográfica, conteo de frecuencias y análisis topológico de vocabulario en español a partir de texto libre.
+2. **¿Entendemos cómo funciona?**  
+   Sí: 1) Tokenización Unicode $\rightarrow$ 2) Inserción recursiva con `localeCompare('es')` $\rightarrow$ 3) Recorridos Inorden/Preorden/Postorden $\rightarrow$ 4) Métricas en $O(n)$.
+3. **¿Qué entradas necesita?**  
+   Cadenas de texto arbitrarias en español con signos de puntuación, mayúsculas, tildes y repeticiones.
+4. **¿Qué resultado produce?**  
+   Estructura jerárquica del ABB, recorridos ordenados, frecuencias léxicas y métricas cuantitativas (altura, hojas, internos).
+5. **¿Encontramos algún error?**  
+   Sí, tres errores críticos: el ordenamiento ASCII primitivo `<` que clasificaba `'árbol'` después de `'zorro'`; la regex `[^a-zA-Z]` que borraba tildes y la `'ñ'`; y el triple recorrido ineficiente para contar métricas.
+6. **¿Qué modificación realizamos?**  
+   Sustitución por `localeCompare('es')`, uso de regex Unicode `/[^\p{L}\p{N}\s]/gu`, y unificación del cálculo de métricas en una pasada $O(n)$.
+7. **¿Por qué realizamos esa modificación?**  
+   Para asegurar la validez lexicográfica en español, preservar las invariantes del ABB y optimizar el rendimiento algorítmico.
 
 ---
 
 ## 4. Tabla de Verificación de las Respuestas Obtenidas
 
-A continuación se muestra la evidencia formal de la **Etapa 5** (Registro de interacción con IA) que evalúa la pertinencia, uso y modificaciones aplicadas a las respuestas de la IA:
+### 📋 Evidencia Gráfica de la Etapa 5:
+![Tabla de Evidencia de Interacción con IA](assets/07_tabla_evidencia_etapa5.svg)
 
-### 📸 Evidencia de la Tabla de Interacción con IA:
-
-#### Parte 1: Diseño del Nodo e Inserción con Duplicados
-![Tabla de Evidencia - Filas 1 y 2](Screenshot 2026-09-30 at 12.41.01 p.m..png)
-
-#### Parte 2: Conteo de Nodos, Casos de Prueba y Normalización en Español
-![Tabla de Evidencia - Filas 3, 4 y 5](Screenshot 2026-09-30 at 12.41.08 p.m..png)
-
----
-
-### 📋 Tabla Oficial Consolidada:
+### 📊 Tabla de Texto Consolidada:
 
 | # | Pregunta realizada a la IA | Respuesta obtenida | ¿Se utilizó? | Modificaciones realizadas | Justificación |
 |---|---|---|:---:|---|---|
@@ -130,19 +128,10 @@ A continuación se muestra la evidencia formal de la **Etapa 5** (Registro de in
 
 ## 5. Casos de Prueba y Resultados
 
-Se implementó y verificó una suite automatizada de **13 casos de prueba** (8 de la rúbrica oficial + 5 casos límite propuestos por la IA).
+### 🧪 Panel de Ejecución de Pruebas:
+![Panel de Pruebas y Recorridos](assets/08_casos_prueba_etapa4.svg)
 
-### 📸 Evidencia de la Batería de Pruebas:
-
-#### Lista de Casos con Insignia de Verificación ("Pasado"):
-![Lista de Casos de Prueba Aprobados](Screenshot 2026-09-30 at 12.41.32 p.m..png)
-
-#### Detalle de Ejecución del Caso 1 (Recorridos Inorden, Preorden y Postorden):
-![Detalle de Recorridos y Validación](Screenshot 2026-09-30 at 12.41.54 p.m..png)
-
----
-
-### 📋 Matriz de los 8 Casos Obligatorios de la Rúbrica:
+### 📋 Los 8 Casos Obligatorios de la Rúbrica:
 
 | Caso | Entrada | Aspecto a comprobar | Resultado Obtenido | Estado |
 |:---:|---|---|---|:---:|
@@ -157,7 +146,7 @@ Se implementó y verificó una suite automatizada de **13 casos de prueba** (8 d
 
 ---
 
-### ⭐ Matriz de los 5 Casos Límite Propuestos por la IA y Análisis de Pertinencia:
+### ⭐ Los 5 Casos Límite Propuestos por la IA:
 
 | Caso Límite | Entrada | Propósito del Caso | Análisis Crítico de Pertinencia | Estado |
 |:---:|---|---|---|:---:|
@@ -187,3 +176,13 @@ Se implementó y verificó una suite automatizada de **13 casos de prueba** (8 d
 
 ### ¿Qué aprendí durante el proceso?
 > *"Aprendí que la inteligencia artificial es una excelente herramienta para acelerar el desarrollo, pero no sustituye el rigor técnico ni el pensamiento crítico del ingeniero de software. Comprobé la importancia de las reglas de localización lingüística en algoritmos de búsqueda, la necesidad de preservar las invariantes de un Árbol Binario de Búsqueda mediante conteo de frecuencias léxicas, y cómo evaluar cuantitativamente la degradación de un ABB en el peor de los casos."*
+
+---
+
+## 💡 Cómo Generar el Reporte Completo en PDF con 1 Clic
+
+Si deseas entregar un documento en PDF con todo el diseño gráfico, diagramas y tablas en colores para tu profesor:
+
+1. Ingresa a la aplicación: [https://ais-pre-patzul5jrew5jg5a2pivai-181795296148.us-west2.run.app](https://ais-pre-patzul5jrew5jg5a2pivai-181795296148.us-west2.run.app)
+2. En la esquina superior derecha, haz clic en **"Ver Reporte Académico"**.
+3. Haz clic en **"Imprimir / Guardar en PDF"** y selecciona *Guardar como PDF*.

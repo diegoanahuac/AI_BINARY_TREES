@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 440" width="850" height="440">
+  <rect width="850" height="440" rx="14" fill="#030712" stroke="#1f2937" stroke-width="1.5"/>
+  
+  <!-- Terminal Header -->
+  <rect x="0" y="0" width="850" height="42" fill="#0b0f19" stroke="#1f2937" stroke-width="1"/>
+  <circle cx="22" cy="21" r="5" fill="#ef4444"/>
+  <circle cx="38" cy="21" r="5" fill="#f59e0b"/>
+  <circle cx="54" cy="21" r="5" fill="#10b981"/>
+  <text x="75" y="25" font-family="monospace" font-size="11" fill="#818cf8">&gt;_ solicitud_contexto_abb.prompt</text>
+  <text x="830" y="25" text-anchor="end" font-family="monospace" font-size="10" fill="#64748b">Prompt Estructurado • Gemini 2.5 / 3.8</text>
+
+  <!-- Prompt Body -->
+  <text x="25" y="70" font-family="monospace" font-size="12" fill="#cbd5e1">Actúa como un Ingeniero de Software Senior y Docente de Estructuras de Datos.</text>
+  <text x="25" y="90" font-family="monospace" font-size="12" fill="#cbd5e1">Necesito diseñar e implementar un sistema de Árbol Binario de Búsqueda (ABB) en TypeScript</text>
+  <text x="25" y="110" font-family="monospace" font-size="12" fill="#cbd5e1">para el procesamiento, indexación y análisis de frecuencias de palabras en textos en español.</text>
+
+  <text x="25" y="145" font-family="monospace" font-size="12" font-weight="bold" fill="#818cf8">Requisitos y Restricciones Técnicas:</text>
+  
+  <text x="25" y="170" font-family="monospace" font-size="11" fill="#94a3b8">1. Estructura del Nodo: palabra, frecuencia de duplicados (count), left, right, nivel, isLeaf, isInternal.</text>
+  <text x="25" y="195" font-family="monospace" font-size="11" fill="#94a3b8">2. Sanitización: limpieza de signos (¡!¿?,.;:) sin eliminar vocales con tilde ni la letra 'ñ'.</text>
+  <text x="25" y="220" font-family="monospace" font-size="11" fill="#94a3b8">3. Inserción en Español: localeCompare('es') para evitar el bug ASCII ('á' 225 &gt; 'z' 122).</text>
+  <text x="25" y="245" font-family="monospace" font-size="11" fill="#94a3b8">4. Tratamiento de Duplicados: acumular frecuencia en el nodo sin duplicar ni romper el ABB.</text>
+  <text x="25" y="270" font-family="monospace" font-size="11" fill="#94a3b8">5. Recorridos y Métricas: Inorden (LNR alfabético), Preorden, Postorden y cálculo O(n) unificado.</text>
+  <text x="25" y="295" font-family="monospace" font-size="11" fill="#94a3b8">6. Desarrollo Gradual: estructurar en fases modulares verificables académicamente.</text>
+
+  <!-- Footer Tag -->
+  <rect x="25" y="340" width="800" height="60" rx="8" fill="#1e1b4b" stroke="#3730a3" stroke-width="1"/>
+  <text x="45" y="365" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#a5b4fc">✔ Justificación Pedagógica de Contextualización:</text>
+  <text x="45" y="385" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">El contexto riguroso previene la generación de código ingenuo en inglés con errores de ordenamiento lexicográfico.</text>
+</svg>

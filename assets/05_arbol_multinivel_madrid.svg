@@ -1,0 +1,84 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 850 430" width="850" height="430">
+  <rect width="850" height="430" rx="14" fill="#030712" stroke="#1f2937" stroke-width="1.5"/>
+  
+  <!-- Header -->
+  <rect x="0" y="0" width="850" height="50" fill="#0b0f19" stroke="#1f2937" stroke-width="1"/>
+  <rect x="20" y="15" width="105" height="22" rx="11" fill="#064e3b" stroke="#059669" stroke-width="1"/>
+  <circle cx="32" cy="26" r="4" fill="#34d399"/>
+  <text x="44" y="30" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#6ee7b7">ABB Activo</text>
+  <text x="135" y="30" font-family="system-ui, sans-serif" font-size="12" fill="#9ca3af">7 nodos únicos (Niveles, Internos y Hojas)</text>
+
+  <!-- Edges -->
+  <line x1="425" y1="100" x2="230" y2="175" stroke="#374151" stroke-width="2.5"/>
+  <line x1="425" y1="100" x2="620" y2="175" stroke="#374151" stroke-width="2.5"/>
+  <line x1="230" y1="175" x2="310" y2="250" stroke="#374151" stroke-width="2.5"/>
+  <line x1="310" y1="250" x2="390" y2="330" stroke="#374151" stroke-width="2.5"/>
+  <line x1="620" y1="175" x2="700" y2="250" stroke="#374151" stroke-width="2.5"/>
+  <line x1="700" y1="250" x2="770" y2="330" stroke="#374151" stroke-width="2.5"/>
+
+  <!-- Root: madrid -->
+  <g transform="translate(425, 100)">
+    <circle r="30" fill="#312e81" stroke="#6366f1" stroke-width="2"/>
+    <text text-anchor="middle" dy="4" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#ffffff">madrid</text>
+    <rect x="-16" y="34" width="32" height="13" rx="6" fill="#4338ca"/>
+    <text text-anchor="middle" y="44" font-family="system-ui, sans-serif" font-size="7" font-weight="bold" fill="#ffffff">RAÍZ</text>
+  </g>
+
+  <!-- Internal: barcelona -->
+  <g transform="translate(230, 175)">
+    <circle r="30" fill="#2e1065" stroke="#8b5cf6" stroke-width="2"/>
+    <text text-anchor="middle" dy="4" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#ffffff">barcelona</text>
+    <rect x="-22" y="34" width="44" height="13" rx="6" fill="#6d28d9"/>
+    <text text-anchor="middle" y="44" font-family="system-ui, sans-serif" font-size="7" font-weight="bold" fill="#ffffff">INTERNO</text>
+  </g>
+
+  <!-- Internal: sevilla -->
+  <g transform="translate(620, 175)">
+    <circle r="30" fill="#2e1065" stroke="#8b5cf6" stroke-width="2"/>
+    <text text-anchor="middle" dy="4" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff">sevilla</text>
+    <rect x="-22" y="34" width="44" height="13" rx="6" fill="#6d28d9"/>
+    <text text-anchor="middle" y="44" font-family="system-ui, sans-serif" font-size="7" font-weight="bold" fill="#ffffff">INTERNO</text>
+  </g>
+
+  <!-- Internal: bilbao -->
+  <g transform="translate(310, 250)">
+    <circle r="30" fill="#2e1065" stroke="#8b5cf6" stroke-width="2"/>
+    <text text-anchor="middle" dy="4" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff">bilbao</text>
+    <rect x="-22" y="34" width="44" height="13" rx="6" fill="#6d28d9"/>
+    <text text-anchor="middle" y="44" font-family="system-ui, sans-serif" font-size="7" font-weight="bold" fill="#ffffff">INTERNO</text>
+  </g>
+
+  <!-- Internal: valencia -->
+  <g transform="translate(700, 250)">
+    <circle r="30" fill="#2e1065" stroke="#8b5cf6" stroke-width="2"/>
+    <text text-anchor="middle" dy="4" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff">valencia</text>
+    <rect x="-22" y="34" width="44" height="13" rx="6" fill="#6d28d9"/>
+    <text text-anchor="middle" y="44" font-family="system-ui, sans-serif" font-size="7" font-weight="bold" fill="#ffffff">INTERNO</text>
+  </g>
+
+  <!-- Leaf: cadiz -->
+  <g transform="translate(390, 330)">
+    <circle r="30" fill="#064e3b" stroke="#10b981" stroke-width="2"/>
+    <text text-anchor="middle" dy="4" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#ffffff">cadiz</text>
+    <rect x="-16" y="34" width="32" height="13" rx="6" fill="#047857"/>
+    <text text-anchor="middle" y="44" font-family="system-ui, sans-serif" font-size="7" font-weight="bold" fill="#ffffff">HOJA</text>
+  </g>
+
+  <!-- Leaf: zaragoza -->
+  <g transform="translate(770, 330)">
+    <circle r="30" fill="#064e3b" stroke="#10b981" stroke-width="2"/>
+    <text text-anchor="middle" dy="4" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#ffffff">zaragoza</text>
+    <rect x="-16" y="34" width="32" height="13" rx="6" fill="#047857"/>
+    <text text-anchor="middle" y="44" font-family="system-ui, sans-serif" font-size="7" font-weight="bold" fill="#ffffff">HOJA</text>
+  </g>
+
+  <!-- Legend -->
+  <g transform="translate(30, 385)">
+    <circle cx="10" cy="10" r="4" fill="#6366f1"/>
+    <text x="20" y="14" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">Raíz (1)</text>
+    <circle cx="90" cy="10" r="4" fill="#8b5cf6"/>
+    <text x="100" y="14" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">Internos (4)</text>
+    <circle cx="180" cy="10" r="4" fill="#10b981"/>
+    <text x="190" y="14" font-family="system-ui, sans-serif" font-size="10" fill="#cbd5e1">Hojas (2)</text>
+  </g>
+</svg>

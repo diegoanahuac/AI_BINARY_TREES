@@ -1,0 +1,87 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 480" width="900" height="480">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#020617"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#0f172a"/>
+    </linearGradient>
+  </defs>
+  <rect width="900" height="480" rx="16" fill="url(#bg)"/>
+  
+  <!-- Header Bar -->
+  <rect x="0" y="0" width="900" height="60" fill="#020617" stroke="#1e293b" stroke-width="1"/>
+  <rect x="25" y="14" width="32" height="32" rx="8" fill="#4f46e5"/>
+  <text x="36" y="35" font-family="system-ui, sans-serif" font-weight="bold" font-size="16" fill="#ffffff">🌳</text>
+  <text x="68" y="30" font-family="system-ui, sans-serif" font-weight="bold" font-size="14" fill="#ffffff">Árbol Binario de Búsqueda (ABB)</text>
+  <rect x="290" y="19" width="65" height="18" rx="9" fill="#312e81" stroke="#4f46e5" stroke-width="1"/>
+  <text x="322" y="32" text-anchor="middle" font-family="monospace" font-size="10" font-weight="bold" fill="#a5b4fc">Etapas 1–5</text>
+  <text x="68" y="47" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">Procesamiento Léxico en Español • Evidencia de Interacción con IA</text>
+
+  <!-- Nav Tabs -->
+  <rect x="25" y="75" width="180" height="32" rx="8" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+  <text x="45" y="96" font-family="system-ui, sans-serif" font-size="12" font-weight="bold" fill="#a5b4fc">Simulador y Visualizador</text>
+  <rect x="160" y="81" width="36" height="18" rx="9" fill="#4f46e5"/>
+  <text x="178" y="94" text-anchor="middle" font-family="monospace" font-size="9" font-weight="bold" fill="#ffffff">VIVO</text>
+  
+  <text x="230" y="96" font-family="system-ui, sans-serif" font-size="12" fill="#64748b">Etapa 1: Contexto</text>
+  <text x="360" y="96" font-family="system-ui, sans-serif" font-size="12" fill="#64748b">Etapa 2: Desarrollo</text>
+  <text x="500" y="96" font-family="system-ui, sans-serif" font-size="12" fill="#64748b">Etapa 3: Verificación</text>
+  <text x="650" y="96" font-family="system-ui, sans-serif" font-size="12" fill="#64748b">Etapa 4: Pruebas</text>
+
+  <!-- Input Card -->
+  <rect x="25" y="125" width="850" height="175" rx="12" fill="url(#cardGrad)" stroke="#334155" stroke-width="1"/>
+  <circle cx="45" cy="150" r="4" fill="#6366f1"/>
+  <text x="58" y="154" font-family="system-ui, sans-serif" font-weight="bold" font-size="14" fill="#ffffff">Simulador y Visualizador Interactivo del ABB</text>
+  <text x="58" y="172" font-family="system-ui, sans-serif" font-size="11" fill="#94a3b8">Texto de entrada para construir el ABB:</text>
+  
+  <!-- Textarea simulated -->
+  <rect x="45" y="185" width="810" height="50" rx="8" fill="#020617" stroke="#334155" stroke-width="1"/>
+  <text x="60" y="215" font-family="monospace" font-size="14" font-weight="bold" fill="#f8fafc">gato perro casa árbol zorro abeja</text>
+
+  <!-- Toggles -->
+  <rect x="45" y="255" width="14" height="14" rx="3" fill="#4f46e5"/>
+  <path d="M48 262 L52 266 L56 258" stroke="#ffffff" stroke-width="2" fill="none"/>
+  <text x="65" y="266" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Normalizar a minúsculas</text>
+
+  <rect x="230" y="255" width="14" height="14" rx="3" fill="#4f46e5"/>
+  <path d="M233 262 L237 266 L241 258" stroke="#ffffff" stroke-width="2" fill="none"/>
+  <text x="250" y="266" font-family="system-ui, sans-serif" font-size="11" fill="#cbd5e1">Limpiar signos ortográficos</text>
+
+  <rect x="430" y="255" width="14" height="14" rx="3" fill="#10b981"/>
+  <path d="M433 262 L437 266 L441 258" stroke="#ffffff" stroke-width="2" fill="none"/>
+  <text x="450" y="266" font-family="system-ui, sans-serif" font-size="11" font-weight="bold" fill="#34d399">Orden español (localeCompare)</text>
+
+  <!-- Metrics Grid -->
+  <rect x="25" y="320" width="125" height="120" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+  <text x="87" y="345" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#64748b">TOTAL PALABRAS</text>
+  <text x="87" y="390" text-anchor="middle" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" fill="#ffffff">6</text>
+  <text x="87" y="415" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">Flujo procesado</text>
+
+  <rect x="165" y="320" width="125" height="120" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+  <text x="227" y="345" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#818cf8">NODOS ÚNICOS</text>
+  <text x="227" y="390" text-anchor="middle" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" fill="#a5b4fc">6</text>
+  <text x="227" y="415" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">En el árbol</text>
+
+  <rect x="305" y="320" width="125" height="120" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+  <text x="367" y="345" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#f43f5e">DUPLICADOS</text>
+  <text x="367" y="390" text-anchor="middle" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" fill="#fda4af">0</text>
+  <text x="367" y="415" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">Frecuencias extras</text>
+
+  <rect x="445" y="320" width="125" height="120" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+  <text x="507" y="345" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#34d399">NODOS HOJA</text>
+  <text x="507" y="390" text-anchor="middle" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" fill="#6ee7b7">2</text>
+  <text x="507" y="415" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">Sin hijos</text>
+
+  <rect x="585" y="320" width="125" height="120" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+  <text x="647" y="345" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#c084fc">INTERNOS</text>
+  <text x="647" y="390" text-anchor="middle" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" fill="#e9d5ff">4</text>
+  <text x="647" y="415" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#64748b">Con al menos 1 hijo</text>
+
+  <rect x="725" y="320" width="150" height="120" rx="10" fill="#0f172a" stroke="#1e293b" stroke-width="1"/>
+  <text x="800" y="345" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" font-weight="bold" fill="#fbbf24">ALTURA / ESTADO</text>
+  <text x="800" y="390" text-anchor="middle" font-family="system-ui, sans-serif" font-size="32" font-weight="bold" fill="#fef08a">4</text>
+  <text x="800" y="415" text-anchor="middle" font-family="system-ui, sans-serif" font-size="10" fill="#10b981">Balanceado</text>
+</svg>
